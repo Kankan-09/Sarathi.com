@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>সাৰথি — E-Learning for Classes 6 to 10</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f5f7fa;
+      animation: fadeInBody 1s ease-in;
+    }
+    @keyframes fadeInBody {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    header {
+      background-color: #0073e6;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 { font-size: 2.2em; margin-bottom: 5px; }
+    header p { font-size: 1em; font-style: italic; }
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #005bb5;
+      flex-wrap: wrap;
+    }
+    nav a {
+      color: white;
+      padding: 14px 20px;
+      text-decoration: none;
+      display: block;
+      transition: background 0.3s ease;
+    }
+    nav a:hover {
+      background-color: #004494;
+    }
+    section {
+      padding: 40px 20px;
+      animation: fadeInSection 0.8s ease-in;
+    }
+    @keyframes fadeInSection {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .hero, .courses {
+      text-align: center;
+      background: #e8f0fe;
+    }
+    .hero h1, .courses h2, .about-section h2 {
+      font-size: 2.2em;
+      margin-bottom: 10px;
+    }
+    .hero p, .courses p, .about-section p {
+      font-size: 1.1em;
+    }
+    .login-section, .signup-section, .dashboard-section, .contact-section, .about-section {
+      max-width: 500px;
+      margin: 40px auto;
+      padding: 30px;
+      background-color: #ffffff;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+    .login-section h2, .signup-section h2, .dashboard-section h2, .contact-section h2, .about-section h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #0073e6;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    button {
+      width: 100%;
+      padding: 12px;
+      background-color: #0073e6;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    button:hover {
+      background-color: #005bb5;
+      transform: scale(1.03);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+    .switch {
+      text-align: center;
+      margin-top: 15px;
+    }
+    .switch a {
+      color: #0073e6;
+      text-decoration: none;
+    }
+    .dashboard-section {
+      max-width: 800px;
+    }
+    .dashboard-section ul {
+      list-style: none;
+      padding: 0;
+    }
+    .dashboard-section li {
+      background: #f0f8ff;
+      margin: 10px 0;
+      padding: 15px;
+      border-radius: 5px;
+      transition: transform 0.2s;
+    }
+    .dashboard-section li:hover {
+      transform: translateX(5px);
+    }
+    .dashboard-section a {
+      text-decoration: none;
+      color: #0073e6;
+      font-weight: bold;
+    }
+    footer {
+      background-color: #0073e6;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+    @media (max-width: 600px) {
+      nav { flex-direction: column; }
+      header h1 { font-size: 1.6em; }
+      .hero h1, .courses h2, .about-section h2 { font-size: 1.6em; }
+      .login-section, .signup-section, .dashboard-section, .contact-section, .about-section {
+        padding: 20px;
+        margin: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>সাৰথি</h1>
+    <p>Your trusted learning companion</p>
+  </header>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Courses</a>
+    <a href="#about">About Us</a>
+    <a href="#contact">Contact</a>
+    <a href="#">Login</a>
+    <a href="#">Signup</a>
+    <a href="#dashboard">Dashboard</a>
+  </nav>
+
+  <section class="about-section" id="about">
+    <h2>About Us</h2>
+    <p>সাৰথি is a free learning platform designed for students from Class 6 to 10. We believe quality education should be accessible to everyone, regardless of background or location.</p>
+    <p>Our mission is to simplify studies for students by providing free notes, engaging video lessons, and fun quizzes — all tailored to the latest school syllabus.</p>
+    <p>Built with care for Assamese learners, সাৰথি supports Math, Science, Social Science, and Assamese subjects.</p>
+  </section>
+
+  <section class="login-section">
+    <h2>Student Login</h2>
+    <form action="#" method="post">
+      <input type="text" placeholder="Email or Username" required />
+      <input type="password" placeholder="Password" required />
+      <button type="submit">Login</button>
+      <div class="switch">
+        <p>Don't have an account? <a href="#signup">Signup here</a></p>
+      </div>
+    </form>
+  </section>
+
+  <section class="signup-section" id="signup">
+    <h2>Create Your Account</h2>
+    <form action="#" method="post">
+      <input type="text" placeholder="Full Name" required />
+      <input type="text" placeholder="Email" required />
+      <input type="password" placeholder="Password" required />
+      <input type="password" placeholder="Confirm Password" required />
+      <button type="submit">Signup</button>
+      <div class="switch">
+        <p>Already have an account? <a href="#">Login here</a></p>
+      </div>
+    </form>
+  </section>
+
+  <section class="dashboard-section" id="dashboard">
+    <h2>Welcome to Your Dashboard</h2>
+    <p>Here are your available features:</p>
+    <ul>
+      <li>📘 <a href="#">View and Continue Courses</a></li>
+      <li>📝 <a href="https://forms.gle/sample-quiz" target="_blank">Take Quiz & Assignments</a></li>
+      <li>📄 <a href="https://example.com/sample-note.pdf" target="_blank">Download Notes (PDF)</a></li>
+      <li>🎥 <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">Watch Lesson Videos</a></li>
+      <li>📊 <a href="#">Track Your Progress (Coming Soon)</a></li>
+    </ul>
+  </section>
+
+  <section class="contact-section" id="contact">
+    <h2>Contact Us</h2>
+    <p style="text-align: center;">Have a question or suggestion? Fill out the form below or email us at <strong>kankanthakuria73@gmail.com</strong>.</p>
+    <form action="mailto:kankanthakuria73@gmail.com" method="post" enctype="text/plain">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 সাৰথি. All rights reserved.</p>
+  </footer>
+</body>
+</html>
